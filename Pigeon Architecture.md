@@ -3,6 +3,14 @@
 
 # 详细说明:
 ##底层功能:
+| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|
+| This       |        This |     This     |
+| column     |      column |    column    |
+| will       |        will |     will     |
+| be         |          be |      be      |
+| left       |       right |    center    |
+| aligned    |     aligned |   aligned    |
 ## MsgHandler模块:
 提供与服务器交互的所有功能。
 ### MsgHandler模块详细说明：
