@@ -8,11 +8,11 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace PigeonGUI
+namespace Pigeon
 {
-    public partial class Page1 : PhoneApplicationPage
+    public partial class Login : PhoneApplicationPage
     {
-        public Page1()
+        public Login()
         {
             InitializeComponent();
         }
