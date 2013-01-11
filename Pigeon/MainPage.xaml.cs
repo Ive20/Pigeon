@@ -7,133 +7,39 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using Pigeon.Resources;
 
-using Pigeon.Msg;
-using System.Device.Location;
-using System.Windows.Media.Imaging;
-using System.Windows.Media;
-
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using System.IO;
-using System.Threading;
-
-using System.Windows.Threading;
-using Microsoft.Phone.Tasks;
-
-namespace Pigeon
+namespace people_hub
 {
     public partial class MainPage : PhoneApplicationPage
     {
-
-        Microphone _mic = Microphone.Default;
-        SoundEffectInstance _soundInstance;
-        bool _soundIsPlaying = false;
-
+        // Constructor
         public MainPage()
         {
             InitializeComponent();
 
-            DispatcherTimer dispatcherTimer = new DispatcherTimer();
-            dispatcherTimer.Interval = TimeSpan.FromMilliseconds(33);
-            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Start();
+            // Sample code to localize the ApplicationBar
+            //BuildLocalizedApplicationBar();
         }
 
-        void dispatcherTimer_Tick(object sender, EventArgs e)
+        private void register_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                FrameworkDispatcher.Update();
-            }
-            catch
-            {
-            }
 
-            if (true == _soundIsPlaying)
-            {
-                if (_soundInstance.State != SoundState.Playing)
-                {
-                    _soundIsPlaying = false;
-                }
-            }
         }
 
-        MessageHandler _handler;
+        // Sample code for building a localized ApplicationBar
+        //private void BuildLocalizedApplicationBar()
+        //{
+        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
+        //    ApplicationBar = new ApplicationBar();
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            _handler = MessageHandler.GetMessageHandler();
-            _handler.Login("cdffh", "123456", "cquapp.com");
-            _handler.OnLogin += HandlerOnLogin;
-            _handler.OnReceiveTextMessage += HandlerOnReceiveTextMessage;
-            _handler.OnReceiveGPSMessage += HandlerOnReceiveGPSMessage;
-            _handler.OnReceiveImageMessage += HandlerOnReceiveImageMessage;
-            _handler.OnReceiveVoiceMessage += HandlerOnReceiveVoiceMessage;
+        //    // Create a new button and set the text value to the localized string from AppResources.
+        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
+        //    appBarButton.Text = AppResources.AppBarButtonText;
+        //    ApplicationBar.Buttons.Add(appBarButton);
 
-            btnLogin.IsEnabled = false;
-        }
-
-        void HandlerOnLogin(object sender, Matrix.EventArgs e)
-        {
-            MessageBox.Show("Login Success");
-        }
-
-        void HandlerOnReceiveTextMessage(object sender, MessagingEventArgs e)
-        {
-            string message = (string)e.Body;
-            MessageBox.Show(message);
-        }
-
-        void HandlerOnReceiveGPSMessage(object sender, MessagingEventArgs e)
-        {
-            GeoCoordinate coordinate = (GeoCoordinate)e.Body;
-            MessageBox.Show("GPS = (" + coordinate.Latitude + ", " + coordinate.Longitude + ")");
-        }
-
-        void HandlerOnReceiveImageMessage(object sender, MessagingEventArgs e)
-        {
-            BitmapImage image = (BitmapImage)e.Body;
-            imgReceived.Source = image;
-        }
-
-        void HandlerOnReceiveVoiceMessage(object sender, MessagingEventArgs e)
-        {
-            _voiceBytes = (byte[])e.Body;
-
-            Thread soundThread = new Thread(new ThreadStart(PlaySound));
-            soundThread.Start();
-        }
-
-        byte[] _voiceBytes;
-
-        void PlaySound()
-        {
-            SoundEffect sound = new SoundEffect(_voiceBytes, _mic.SampleRate, AudioChannels.Mono);
-            _soundInstance = sound.CreateInstance();
-            _soundIsPlaying = true;
-            _soundInstance.Play();
-        }
-
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
-        {
-            _handler = MessageHandler.GetMessageHandler();
-            string userName = txtUserName.Text;
-            string password = "123456";
-            _handler.Register(userName, password, "cquapp.com");
-            _handler.OnRegister += HandlerOnRegister;
-            _handler.OnRegisterError += HandlerOnRegisterError;
-        }
-
-        void HandlerOnRegister(object sender, EventArgs e)
-        {
-        }
-
-        void HandlerOnRegisterError(object sender, Matrix.Xmpp.Client.IqEventArgs e)
-        {
-        }
-
-
+        //    // Create a new menu item with the localized string from AppResources.
+        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
+        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
+        //}
     }
 }
