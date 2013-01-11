@@ -1,7 +1,22 @@
-1 git add .
-2 git status
-3 git commit -m ""
-4 git push origin yuhui
+1.
+cd ..
+cd Administrator
+cd Desktop
+cd Pigeon
+cd Pigeon
+git add .
+git status
+git commit -m ""
+git push origin yuhui
 
-1 git pull
-  git fetch
+2.
+cd ..
+cd Administrator
+cd Desktop
+cd Pigeon
+cd Pigeon
+git commit -m
+git pull
+git checkout yuhui
+git merge developer
+git status
