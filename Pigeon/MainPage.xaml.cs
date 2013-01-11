@@ -16,41 +16,14 @@ namespace people_hub
         public MainPage()
         {
             InitializeComponent();
-<<<<<<< HEAD
         }
 
-
-        MessageHandler _handler;
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
-        }  
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
-        {
-            _handler = MessageHandler.GetMessageHandler();
-            string userName = txtUserName.Text;
-            string password = "123456";
-            _handler.Register(userName, password, "cquapp.com");
-            _handler.OnRegister += HandlerOnRegister;
-            _handler.OnRegisterError += HandlerOnRegisterError;
-        }
-        void HandlerOnRegister(object sender, EventArgs e)
-        {
-        }
-        void HandlerOnRegisterError(object sender, Matrix.Xmpp.Client.IqEventArgs e)
-        {
-        }
-=======
-
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
-        }
 
         private void register_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
+            NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+        }  
+      
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{
@@ -66,6 +39,5 @@ namespace people_hub
         //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
         //}
->>>>>>> developer
     }
 }

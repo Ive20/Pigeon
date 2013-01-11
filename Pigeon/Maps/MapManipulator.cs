@@ -61,6 +61,7 @@ namespace Pigeon.Maps
             Geoposition position = await locator.GetGeopositionAsync();
             Geocoordinate oldStyleCoordinate = position.Coordinate;
             GeoCoordinate coordinate = CoordinateConverter.ConvertGeocoordinate(oldStyleCoordinate);
+            string temp = coordinate.ToString();
             JumpTo(coordinate);
             Pinpoint(coordinate, brush);
         }

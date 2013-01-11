@@ -27,6 +27,18 @@ namespace Pigeon.Msg
 {
     public class MessagingEventArgs
     {
+        string _Name;
+        public string Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                _Name = value;
+            }
+        }
         object _body;
         public object Body
         {
@@ -74,9 +86,9 @@ namespace Pigeon.Msg
         {
             _xmppClient = new XmppClient();
             MsgHeader.Add("Text", "_CUROTEXT@");
-            MsgHeader.Add("Gps","_CUROGPS@");
+            MsgHeader.Add("GPS","_CUROGPS@");
             MsgHeader.Add("Img", "_CUROIMAGE@");
-            MsgHeader.Add("VOi","_CUROVOICE@");
+            MsgHeader.Add("Voi","_CUROVOICE@");
             MsgHeader.Add("Inv","_CUROInv@");
             _xmppClient.OnLogin += xmppClient_OnLogin;
             _xmppClient.OnMessage += xmppClient_OnMessage;
@@ -220,27 +232,26 @@ namespace Pigeon.Msg
         void xmppClient_OnMessage(object sender, MessageEventArgs e)
         {
             string header = MessageUtility.GetHeader(e.Message.Body);
-            string content = e.Message.Body.Substring(header.Length, e.Message.Body.Length - header.Length);
-
+            string content = e.Message.Body.Substring(header.Length, e.Message.Body.Length - header.Length);  
             MessagingEventArgs msgArg = new MessagingEventArgs();
-          
+            msgArg.Name = e.Message.From.ToString();
             if (header == MsgHeader["Text"])
             {
                 msgArg.Body = content;
                 this.OnReceiveTextMessage(sender, msgArg);
 
             }
-            else if (header == MsgHeader["Img"]) 
+            else if (header == MsgHeader["GPS"]) 
             {
                 msgArg.Body = MessageUtility.DecodeGPS(content);
                 this.OnReceiveGPSMessage(sender, msgArg);
             }
-            else if (header == MsgHeader["Voi"])
+            else if (header == MsgHeader["Img"])
             {
                 msgArg.Body = MessageUtility.DecodeImage(content);
                 this.OnReceiveImageMessage(sender, msgArg);
             }
-            else if (header == MsgHeader["Gps"])
+            else if (header == MsgHeader["Voi"])
             {
                 msgArg.Body = MessageUtility.DecodeVoice(content);
                 this.OnReceiveVoiceMessage(sender, msgArg);

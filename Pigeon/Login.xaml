@@ -54,10 +54,10 @@
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="你好，" VerticalAlignment="Top" Height="27" Width="60"/>
                 <TextBlock Grid.Row="0" HorizontalAlignment="Left" Margin="10,32,0,0" TextWrapping="Wrap" Text="请输入密码" VerticalAlignment="Top" Height="27" Width="100" />
-                <TextBox x:Name="txtPhoneNumber" Grid.Row="1" HorizontalAlignment="Left" Margin="23,2,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="386" Height="72" />
+                <TextBox x:Name="txtPhoneNumber" Grid.Row="1" HorizontalAlignment="Left" Margin="23,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386" Height="72" Text="cdffh" />
                 <Button x:Name="btnFindPassword" Grid.Row="2" Content="找回密码" HorizontalAlignment="Left" Margin="10,0,0,-3" VerticalAlignment="Top" Width="195" Height="72" />
                 <Button x:Name="btnLogin" Grid.Row="2" Content="登陆" HorizontalAlignment="Left" Margin="234,0,0,-3" VerticalAlignment="Top" Width="192" Height="72" Click="btnLogin_Click" />
-                <TextBox x:Name="txtPassword" Grid.Row="1" HorizontalAlignment="Left" Margin="23,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="386" Height="72" />
+                <TextBox x:Name="txtPassword" Grid.Row="1" HorizontalAlignment="Left" Margin="23,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="386" Height="72" Text="123456" />
             </Grid>
 
         </Grid>

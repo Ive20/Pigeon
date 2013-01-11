@@ -28,6 +28,8 @@ namespace Pigeon
         }
         private void LoginSuccess(object sender, Matrix.EventArgs e)
         {
+            MessageBox.Show("success");
+            NavigationService.Navigate(new Uri("/Navigation.xaml", UriKind.Relative));
         }
     }
 }
