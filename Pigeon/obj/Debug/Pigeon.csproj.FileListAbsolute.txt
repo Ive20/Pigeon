@@ -97,3 +97,24 @@ C:\Users\Jack\Docs\2013 Spring\IMG\Pigeon SVN\trunk\src\Pigeon\Pigeon\obj\Debug\
 C:\Users\Jack\Docs\2013 Spring\IMG\Pigeon SVN\trunk\src\Pigeon\Pigeon\obj\Debug\Pigeon.dll
 C:\Users\Jack\Docs\2013 Spring\IMG\Pigeon SVN\trunk\src\Pigeon\Pigeon\obj\Debug\Pigeon.pdb
 C:\Users\Jack\Docs\2013 Spring\IMG\Pigeon SVN\trunk\src\Pigeon\Pigeon\obj\Debug\XapCacheFile.xml
+E:\pigeon\Pigeon\Bin\Debug\Assets\ApplicationIcon.png
+E:\pigeon\Pigeon\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+E:\pigeon\Pigeon\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+E:\pigeon\Pigeon\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+E:\pigeon\Pigeon\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+E:\pigeon\Pigeon\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+E:\pigeon\Pigeon\Bin\Debug\Pigeon.dll
+E:\pigeon\Pigeon\Bin\Debug\Pigeon.pdb
+E:\pigeon\Pigeon\Bin\Debug\AppManifest.xaml
+E:\pigeon\Pigeon\Bin\Debug\Pigeon_Debug_AnyCPU.xap
+E:\pigeon\Pigeon\Bin\Debug\MatriX.dll
+E:\pigeon\Pigeon\obj\Debug\Pigeon.csprojResolveAssemblyReference.cache
+E:\pigeon\Pigeon\obj\Debug\App.g.cs
+E:\pigeon\Pigeon\obj\Debug\Login.g.cs
+E:\pigeon\Pigeon\obj\Debug\MainPage.g.cs
+E:\pigeon\Pigeon\obj\Debug\Pigeon.g.resources
+E:\pigeon\Pigeon\obj\Debug\Pigeon.Resources.AppResources.resources
+E:\pigeon\Pigeon\obj\Debug\Pigeon.csproj.GenerateResource.Cache
+E:\pigeon\Pigeon\obj\Debug\Pigeon.dll
+E:\pigeon\Pigeon\obj\Debug\Pigeon.pdb
+E:\pigeon\Pigeon\obj\Debug\XapCacheFile.xml
